@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/Country"
+        android:id="@+id/CountryItem_row_element"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="Country"
+        android:textColor="#2196F3"
+        android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/Mfr_CommonName"
+        android:id="@+id/CommonNameItem_row_element"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="CommonName"
+        android:textColor="#2196F3"
+        android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/Mfr_ID"
+        android:id="@+id/Mfr_Name_row_element"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:textColor="#2196F3"
+        android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/Mfr_Name"
+    <View
+        android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#00BCD4" />
 </LinearLayout>

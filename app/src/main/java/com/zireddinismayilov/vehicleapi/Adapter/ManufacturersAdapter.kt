@@ -8,18 +8,26 @@ import androidx.recyclerview.widget.RecyclerView
 import com.zireddinismayilov.vehicleapi.Model.Results
 import com.zireddinismayilov.vehicleapi.R
 
-class ManufacturersAdapter(var list: Results) : RecyclerView.Adapter<ManufacturersAdapter.ViewHolder>() {
+class ManufacturersAdapter(var list: Results, val onItemClick: OnItemClickListener) :
+    RecyclerView.Adapter<ManufacturersAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var Country = itemView.findViewById<TextView>(R.id.Country)
-        var Mfr_CommonName = itemView.findViewById<TextView>(R.id.Mfr_CommonName)
-        var Mfr_Name = itemView.findViewById<TextView>(R.id.Mfr_Name)
-        var Mfr_ID = itemView.findViewById<TextView>(R.id.Mfr_ID)
+        var Country = itemView.findViewById<TextView>(R.id.CountryItem_row_element)
+        var Mfr_CommonName = itemView.findViewById<TextView>(R.id.CommonNameItem_row_element)
+        var Mfr_Name = itemView.findViewById<TextView>(R.id.Mfr_Name_row_element)
+
+        init {
+            itemView.setOnClickListener {
+                onItemClick.onItemClick(adapterPosition)
+            }
+        }
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.row_element, parent, false))
+        return ViewHolder(
+            LayoutInflater.from(parent.context).inflate(R.layout.row_element, parent, false)
+        )
     }
 
     override fun getItemCount(): Int {
@@ -27,9 +35,14 @@ class ManufacturersAdapter(var list: Results) : RecyclerView.Adapter<Manufacture
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.Country.setText(list.Results[position].Country)
-        holder.Mfr_CommonName.setText(list.Results[position].Mfr_CommonName)
-        holder.Mfr_Name.setText(list.Results[position].Mfr_Name)
-        holder.Mfr_ID.setText(list.Results[position].Mfr_ID)
+        holder.Country.text = list.Results[position].Country
+        holder.Mfr_CommonName.text = list.Results[position].Mfr_CommonName
+        holder.Mfr_Name.text = list.Results[position].Mfr_Name
+
     }
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
+    }
+
 }

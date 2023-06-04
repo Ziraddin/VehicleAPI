@@ -7,6 +7,6 @@ import retrofit2.http.Query
 
 interface vehicleApi {
 
-    @GET("getallmanufacturers")
+    @GET("api/vehicles/getallmanufacturers")
     fun getallmanufacturers(@Query("format") format: String): Call<Results?>?
 }

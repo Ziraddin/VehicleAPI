@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
@@ -31,14 +31,49 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="#2196F3"
-            android:text="Search" />
+            android:text="Search"
+            android:textColor="#fff" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/resultsCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingBottom="10dp"
+        android:textColor="#2EDA35"
+        android:textSize="20sp" />
+
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="#03A9F4" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.5"
+        android:indeterminateTint="#03A9F4"
+        android:visibility="visible" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/getManufacturersRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:paddingLeft="30dp"
+        android:paddingTop="4dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="20dp"
+        android:visibility="gone">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>
