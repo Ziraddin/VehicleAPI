@@ -14,6 +14,7 @@ import com.zireddinismayilov.vehicleapi.Adapter.ManufacturersAdapter
 import com.zireddinismayilov.vehicleapi.ViewModel.MainActivityViewModel
 import com.zireddinismayilov.vehicleapi.databinding.ActivityMainBinding
 
+
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     lateinit var viewModel: MainActivityViewModel

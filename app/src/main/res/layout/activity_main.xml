@@ -17,22 +17,13 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/searchET"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Search"
-            android:inputType="text" />
 
-        <Button
-            android:id="@+id/searchBtn"
-            android:layout_width="match_parent"
+        <SearchView
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#2196F3"
-            android:text="Search"
-            android:textColor="#fff" />
+            android:iconifiedByDefault="false"
+            android:queryHint="Search" />
+
 
     </LinearLayout>
 
@@ -46,12 +37,9 @@
         android:textSize="20sp" />
 
 
-    <View
-        android:id="@+id/divider2"
+    <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:background="?android:attr/listDivider"
-        android:backgroundTint="#03A9F4" />
+        android:layout_height="wrap_content" />
 
     <ProgressBar
         android:id="@+id/progressBar"

@@ -31,12 +31,9 @@
         android:textColor="#2196F3"
         android:textSize="20sp" />
 
-    <View
-        android:id="@+id/divider"
+    <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
-        android:background="?android:attr/listDivider"
-        android:backgroundTint="#00BCD4" />
+        android:layout_marginTop="5dp"/>
 </LinearLayout>
