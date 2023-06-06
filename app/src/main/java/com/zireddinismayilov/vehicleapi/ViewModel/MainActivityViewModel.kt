@@ -1,6 +1,7 @@
 package com.zireddinismayilov.vehicleapi.ViewModel
 
 import android.content.Context
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -23,6 +24,20 @@ class MainActivityViewModel : ViewModel() {
                 Toast.makeText(context, "Error has occured!", Toast.LENGTH_LONG).show()
             }
         })
+    }
+
+    fun getDataByManufacturerName(context: Context, manufacturerName: String) {
+        RetrofitInstance.instance.getDataByManufacturerName(manufacturerName, "json")
+            ?.enqueue(object : Callback<Results?> {
+                override fun onResponse(call: Call<Results?>, response: Response<Results?>) {
+                    result.postValue(response.body())
+                }
+
+                override fun onFailure(call: Call<Results?>, t: Throwable) {
+                    Toast.makeText(context, "Error has occured!", Toast.LENGTH_LONG).show()
+                }
+
+            })
     }
 
     fun observeResult(): MutableLiveData<Results> {

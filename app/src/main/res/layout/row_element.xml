@@ -11,7 +11,8 @@
         android:layout_height="wrap_content"
         android:hint="Country"
         android:textColor="#2196F3"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/CommonNameItem_row_element"
@@ -21,7 +22,8 @@
         android:layout_marginBottom="10dp"
         android:hint="CommonName"
         android:textColor="#2196F3"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/Mfr_Name_row_element"
@@ -29,11 +31,43 @@
         android:layout_height="wrap_content"
         android:hint="Name"
         android:textColor="#2196F3"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/Address_row_element"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="Address"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ContactEmail_row_element"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ContactEmail"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ContactPhone_row_element"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:hint="ContactPhone"
+        android:textColor="#2196F3"
+        android:textSize="20sp"
+        android:visibility="gone" />
 
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp" />
 </LinearLayout>
